@@ -26,12 +26,16 @@ food partner - list food items, matlab add karega food items ko
 14. jab hum file bhejte hai express ke server pe frontend se, express ka server by default file nahi padh sakta, uske liye multer name ka package use hoga
 15. file stored jo hogi vo ya to ssd pe hogi ya hard disk mai hogi, but production pe jo server chal raha hota hai vahan ssd and hard disk ka access nahi hota hai so server pe files store nhi hoti cloud storage providers pe hoti hai
 
-# community edition database - matlab local system pe database download rehta hai and background mai chalta hai
+- community edition database - matlab local system pe database download rehta hai and background mai chalta hai
 
-# imagekit - hum apni files ispe daalte hai aur ye badle mai hume ek url deta hai, simillarly cloudinary, awsS3 - aisie services jinko hum kabhi bhi change kar sakte hai, i.e third party services in sab ka code jata hai services folder ke andr
+- imagekit - hum apni files ispe daalte hai aur ye badle mai hume ek url deta hai, simillarly cloudinary, awsS3 - aisie services jinko hum kabhi bhi change kar sakte hai, i.e third party services in sab ka code jata hai services folder ke andr
 
-# dao file - server aur database ke beech mai jitne interactions hote hai vo dao file ke through hote hai
+- dao file - server aur database ke beech mai jitne interactions hote hai vo dao file ke through hote hai
 
-# data validation
+- data validation
 
-# pexels.com
+- pexels.com
+
+# FRONTEND -
+
+1. abb humne jo api bnayi hai unke liye routes bnake unka ui banana hai
