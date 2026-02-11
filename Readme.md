@@ -30,4 +30,8 @@ food partner - list food items, matlab add karega food items ko
 
 # imagekit - hum apni files ispe daalte hai aur ye badle mai hume ek url deta hai, simillarly cloudinary, awsS3 - aisie services jinko hum kabhi bhi change kar sakte hai, i.e third party services in sab ka code jata hai services folder ke andr
 
+# dao file - server aur database ke beech mai jitne interactions hote hai vo dao file ke through hote hai
+
+# data validation
+
 # pexels.com

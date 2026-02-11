@@ -7,6 +7,7 @@ const multer = require("multer");
 const upload = multer({
   storage: multer.memoryStorage(),
 });
+
 // Post /api/food/ protected hogi only food partner can add food item
 router.post(
   "/",
@@ -15,5 +16,8 @@ router.post(
   foodController.createFood
 );
 //api endpoint
+
+// GET /api/food/ [protected]
+router.get("/", authMiddleware.authUserMiddleware, foodController.getFoodItems);
 
 module.exports = router;
