@@ -13,6 +13,7 @@ const UserLogin = () => {
     const password = e.target.password.value;
 
     const response = await axios.post(
+      // email password nikala usko bheja is api pe, agr sahi hai to token generate karegi
       "http://localhost:3000/api/auth/user/login",
       {
         email,
