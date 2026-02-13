@@ -137,11 +137,6 @@ async function registerFoodPartner(req, res) {
 }
 
 async function loginFoodPartner(req, res) {
-  if (!req.body) {
-    return res.status(400).json({
-      message: "Request body is missing",
-    });
-  }
   const { email, password } = req.body;
 
   const foodPartner = await foodPartnerModel.findOne({

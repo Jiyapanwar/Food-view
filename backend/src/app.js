@@ -1,7 +1,9 @@
+// create server
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/auth.routes");
 const foodRoutes = require("./routes/food.routes");
+const foodPartnerRoutes = require("./routes/food-partner.routes");
 const cors = require("cors");
 
 const app = express();
@@ -22,6 +24,7 @@ app.get("/", (req, res) => {
 //dummy route
 app.use("/api/auth", authRoutes);
 app.use("/api/food", foodRoutes);
+app.use("/api/food-partner", foodPartnerRoutes);
 // iska matlab auth ki koi bhi api use krne se pehle ye prefix lagana padega
 
 module.exports = app;

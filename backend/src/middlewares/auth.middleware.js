@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 
 async function authFoodPartnerMiddleware(req, res, next) {
   const token = req.cookies.token;
+
   if (!token) {
     return res.status(401).json({
       message: "Please login first",
@@ -12,8 +13,11 @@ async function authFoodPartnerMiddleware(req, res, next) {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
     const foodPartner = await foodPartnerModel.findById(decoded.id);
+
     req.foodPartner = foodPartner;
+
     next();
   } catch (err) {
     return res.status(401).json({
@@ -50,7 +54,3 @@ module.exports = {
   authFoodPartnerMiddleware,
   authUserMiddleware,
 };
-
-// ye basically check kar raha hai kya jo banda food add krna chahta hai vo food partner hai and also kya registered hai
-
-// iss middleware ke baad jo controller lgaya hoga us contoller ke pass iska logic chala jayega
