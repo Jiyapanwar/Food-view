@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../../styles/auth-shared.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import api from "../../api";
 
 const UserRegister = () => {
   const navigate = useNavigate();
@@ -15,8 +16,8 @@ const UserRegister = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    const response = await axios.post(
-      "http://localhost:3000/api/auth/user/register",
+    const response = await api.post(
+      "/api/auth/user/register",
       {
         fullName: firstName + " " + lastName,
         email,
